@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sea of Thieves</title> <!-- Title of the Website -->
+        <link rel="icon" type="image/x-icon" href="/Images/Icon.png"> <!-- Icon -->
+        <link rel="stylesheet" href="style.css"> <!-- Style CSS -->
+        <script src="index.js" defer></script> <!-- JavaScript -->
+    </head>
+    <body>
+        <div class="Wrap">
+            <!--HEADER-->
+            <header>
+            <a href="/index.html">
+                <img src="/Images/Logo.png" alt="Sea of Thieves Logo" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/Gameplay/index.html">Gameplay</a></li>
+                    <li><a href="/Treasure/index.html">Treasure Hunt</a></li>
+                    <li><a href="/Pirates life/index.html">Pirates</a></li>
+                    <li><a href="/Events/index.html">Events</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="game-banner">
+            <video autoplay muted loop id="gameplay-video" class="banner-video">
+                <source src="/GIFs/banner.mp4" type="video/mp4">
+                <!-- Fallback image in case video doesn’t play -->
+                <img src="/images/banner.png" alt="Game Mechanics Banner">
+            </video>
+            <div class="banner-content">
+                <h1 class="page-title">MAIN GAMEPLAY</h1>
+                <p class="page-subtitle">Establish different playstyles to adapt to all the adventurous events in the Sea Of Thieves.</p>
+            </div>
+        </div>
+            <nav class="Navi">
+                <ul>
+                    <li class="action">Actions</li>
+                </ul>
+            </nav>
+        </main>
+
+
+             <!-- CAROUSEL -->
+      <div class="carousel">
+        <button class="arrow left-arrow" onclick="changeSlide(-1)">&#10094;</button>
+
+        <div class="carousel-content">
+          <img id="carousel-img" alt="Slide image" />
+          <div class="description">
+            <h2><span id="carousel-title"></span></h2>
+            <p id="carousel-text"></p>
+            <p id="carousel-extra"></p>
+          </div>
+        </div>
+
+        <button class="arrow right-arrow" onclick="changeSlide(1)">&#10095;</button>
+      </div>
+      <div id="carousel-dots" class="dots">
+        <span class="dot active" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+        <span class="dot" onclick="goToSlide(2)"></span>
+      </div>
+    </main>
+
+
+    <!--FOOTER-->
+        <footer>
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="/Images/Logo.png" alt="Sea of Thieves Logo">
+                </div>
+                <div class="footer-content">
+                    <p>Sea of Thieves has a swashbuckling Pirates Adventure.</p>
+                    <h4>Follow Sea of Thieves</h4>
+                    <div class="social-icons">
+                        <a href="https://x.com/SeaOfThieves" class="social-icon">
+                            <img src="/Images/twtt-logo.png" alt="Twitter">
+                        </a>
+                        <a href="https://discord.com/invite/MXGC8JAGyH" class="social-icon">
+                            <img src="/Images/dc-logo.png" alt="Discord">
+                        </a>
+                        <a href="https://www.youtube.com/@SeaOfThieves" class="social-icon">
+                            <img src="/Images/yt-logo.png" alt="YouTube">
+                        </a>
+                        <a href="https://www.twitch.tv" class="social-icon">
+                            <img src="/Images/twitch-logo.png" alt="Twitch">
+                        </a>
+                    </div>
+                    <p class="footer-bot">&copy; Sea of Thieves Fan Project.</p>
+                </div>
+            </div>
+        </footer>
+
+
+        </div>
+    </body>
+</html>

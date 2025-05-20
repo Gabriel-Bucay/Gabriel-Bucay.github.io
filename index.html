@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sea of Thieves</title> <!-- Title of the Website -->
+    <link rel="icon" type="image/x-icon" href="Images/Icon.png"> <!-- Icon -->
+    <link rel="stylesheet" href="style.css"> <!-- Style CSS -->
+    <script src="index.js" defer></script> <!-- JavaScript -->
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <a href="index.html">
+                <img src="/Images/Logo.png" alt="Sea of Thieves Logo" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/Gameplay/index.html">Gameplay</a></li>
+                    <li><a href="/Treasure/index.html">Treasure Hunt</a></li>
+                    <li><a href="/Pirates life/index.html">Pirates</a></li>
+                    <li><a href="/Events/index.html">Events</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Background Video Section -->
+            <section class="animated-background">
+                <video autoplay loop muted>
+                    <source src="GIFs/opening.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">
+                    <h2>Welcome To The Sea of Thieves!</h2>
+                    <p>Embark on an unforgettable adventure!</p>
+                </div>
+            </section>
+
+            <div class="spacer"></div>
+
+            <!-- Image Showcase Section -->
+            <section class="image-showcase">
+                <h2>Game Showcase</h2>
+                <div class="background-display">
+                    <img id="display-image" src="Images/default-bg.png" alt="Selected Image">
+                </div>
+            </section>
+
+            <!-- Image Scroller Section -->
+            <section class="image-slider">
+                <div class="scroller-container">
+                    <button class="scroll-btn_left" onclick="scrollLeft()">‹</button>
+                    <div class="scroller">
+                        <div class="image-container" onclick="updateDisplay('Images/event-1.png')">
+                            <img src="Images/event-1.png" class="game-image" alt="Game Scene 1">
+                        </div>
+                        <div class="image-container" onclick="updateDisplay('Images/event-2.png')">
+                            <img src="Images/event-2.png" class="game-image" alt="Game Scene 2">
+                        </div>
+                        <div class="image-container" onclick="updateDisplay('Images/event-3.png')">
+                            <img src="Images/event-3.png" class="game-image" alt="Game Scene 3">
+                        </div>
+                        <div class="image-container" onclick="updateDisplay('Images/event-4.png')">
+                            <img src="Images/event-4.png" class="game-image" alt="Game Scene 4">
+                        </div>
+                        <div class="image-container" onclick="updateDisplay('Images/event-5.png')">
+                            <img src="Images/event-5.png" class="game-image" alt="Game Scene 5">
+                        </div>
+                        <div class="image-container" onclick="updateDisplay('Images/event-6.png')">
+                            <img src="Images/event-6.png" class="game-image" alt="Game Scene 6">
+                        </div>
+                        <div class="image-container" onclick="updateDisplay('Images/event-7.png')">
+                            <img src="Images/event-7.png" class="game-image" alt="Game Scene 7">
+                        </div>
+                        <div class="image-container" onclick="updateDisplay('Images/event-8.png')">
+                            <img src="Images/event-8.png" class="game-image" alt="Game Scene 8">
+                        </div>
+                    </div>
+                    <button class="scroll-btn_right" onclick="scrollRight()">›</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer section -->
+        <footer>
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="Images/Logo.png" alt="Sea of Thieves Logo">
+                </div>
+                <div class="footer-content">
+                    <p>Sea of Thieves has a swashbuckling Pirates Adventure.</p>
+                    <h4>Follow Sea of Thieves</h4>
+                    <div class="social-icons">
+                        <a href="https://x.com/SeaOfThieves" class="social-icon">
+                            <img src="Images/twtt-logo.png" alt="Twitter">
+                        </a>
+                        <a href="https://discord.com/invite/MXGC8JAGyH" class="social-icon">
+                            <img src="Images/dc-logo.png" alt="Discord">
+                        </a>
+                        <a href="https://www.youtube.com/@SeaOfThieves" class="social-icon">
+                            <img src="Images/yt-logo.png" alt="YouTube">
+                        </a>
+                        <a href="https://www.twitch.tv" class="social-icon">
+                            <img src="Images/twitch-logo.png" alt="Twitch">
+                        </a>
+                    </div>
+                    <p class="footer-bot">&copy; Sea of Thieves Fan Project.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,323 @@
+/*********************
+   1.General style
+**********************/
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    min-height: 100vh; 
+    width: 100%;
+    background-image: url(/Images/texturebg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(/Images/texturebg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #222831;
+    padding: 20px;
+}   
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+* {
+    margin: 0;                  
+    padding: 0;                 
+    box-sizing: border-box;     
+}
+
+/*********************
+   2.Logo and header
+**********************/
+header {
+    background-color: rgba(1, 13, 15, 0.897);
+    color: var(--text-light);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 5%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0);
+    width: 100%;
+    backdrop-filter: blur(10px);
+}
+
+.logo-container {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+}
+/*********************
+ 3.  Treasure cards
+**********************/
+.hero-banner {
+    position: relative;        /* Sets positioning context for children */
+    width: 100%;               /* Makes banner full width */
+    height: 400px;             /* Sets banner height */
+    overflow: hidden;          /* Hides any overflowing content */
+}
+
+.banner-image {
+    position: absolute;        /* Positions image absolutely within container */
+    top: 0;                    /* Aligns to top */
+    left: 0;                   /* Aligns to left */
+    width: 100%;               /* Makes image full width */
+    height: 100%;              /* Makes image full height */
+    object-fit: cover;         /* Makes image cover area without distortion */
+    z-index: 0;                /* Positions image behind content */
+}
+
+.banner-content {
+    position: absolute;        /* Positions content absolutely */
+    top: 0;                    /* Aligns to top */
+    left: 0;                   /* Aligns to left */
+    width: 100%;               /* Makes content full width */
+    height: 100%;              /* Makes content full height */
+    display: flex;             /* Uses flexbox for layout */
+    flex-direction: column;    /* Stacks content vertically */
+    justify-content: center;   /* Centers content vertically */
+    align-items: center;       /* Centers content horizontally */
+    z-index: 1;                /* Positions content above image */
+    background: rgba(0, 0, 0, 0.5); /* Adds semi-transparent dark overlay */
+    color: var(--text-light);  /* Makes text light colored */
+    padding: 0 5%;             /* Adds horizontal padding */
+    text-align: center;        /* Centers text */
+}
+
+.page-title {
+    font-size: 10rem;           /* Sets large font size */
+    color: var(--text-light);  /* Makes title light colored */
+    margin-bottom: 1rem;       /* Adds space below title */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds shadow to text */
+    position: relative;        /* Sets positioning context */
+    padding-bottom: 0.5rem;    /* Adds padding below */
+}
+
+.page-title:after {
+    content: '';               /* Creates pseudo-element */
+    position: absolute;        /* Positions absolutely */
+    width: 100px;              /* Sets width of underline */
+    height: 4px;               /* Sets height of underline */
+    background-color: var(--primary-color); /* Colors underline */
+    bottom: 0;                 /* Aligns to bottom */
+    left: 50%;                 /* Centers horizontally */
+    transform: translateX(-50%); /* Adjusts for true centering */
+}
+
+.page-subtitle {
+    font-size: 2rem;
+    color: var(--text-light);  /* Makes subtitle light colored */
+    max-width: 800px;          /* Limits width */
+    margin: 0 auto;            /* Centers horizontally */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Adds shadow to text */
+}
+
+/* === NEWS CONTENT === */
+.tre-container {
+    max-width: 1200px;         /* Limits width of container */
+    margin: 3rem auto;         /* Centers horizontally with space top/bottom */
+    margin-top: 50%;
+    padding: 0 1rem;           /* Adds horizontal padding */
+}
+
+.tre-filter {
+    display: flex;             /* Uses flexbox for layout */
+    flex-wrap: wrap;           /* Allows items to wrap to next line */
+    gap: 1rem;                 /* Adds space between items */
+    margin-bottom: 2rem;       /* Adds space below filter */
+    justify-content: center;   /* Centers items horizontally */
+}
+
+.tre-grid {
+    display: grid;             /* Uses CSS grid for layout */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Creates responsive columns */
+    gap: 2rem;                 /* Adds space between grid items */
+}
+
+.tre-card {
+    background-color: #222831;   /* Makes card background white */
+    border-radius: 8px;        /* Rounds corners */
+    overflow: hidden;          /* Hides any overflowing content */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed); /* Animates changes */
+}
+
+.tre-card:hover {
+    transform: translateY(-5px); /* Moves card up on hover */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Increases shadow on hover */
+}
+
+.tre-image {
+    height: 200px;             /* Sets image area height */
+    overflow: hidden;          /* Hides overflowing image parts */
+    position: relative;        /* Sets positioning context */
+}
+
+.tre-image img {
+    width: 100%;               /* Makes image full width */
+    height: 100%;              /* Makes image full height */
+    object-fit: cover;         /* Makes image cover area without distortion */
+    transition: transform 0.5s; /* Animates image scaling */
+}
+
+.tre-card:hover .tre-image img {
+    transform: scale(1.05);    /* Slightly enlarges image on hover */
+}
+
+.tre-category {
+    position: absolute;        /* Positions category label absolutely */
+    top: 15px;                 /* Sets distance from top */
+    left: 15px;                /* Sets distance from left */
+    background-color: var(--primary-color); /* Colors label */
+    color: white;              /* Makes text white */
+    padding: 0.25rem 0.75rem;  /* Adds padding inside label */
+    border-radius: 20px;       /* Makes rounded pill shape */
+    font-size: 0.8rem;         /* Sets smaller font size */
+    font-weight: 600;          /* Makes text semi-bold */
+    z-index: 1;                /* Ensures it's above the image */
+}
+
+.tre-content {
+    padding: 1.5rem;           /* Adds padding inside content area */
+}
+
+.tre-title {
+    font-size: 1.25rem;        /* Sets title font size */
+    margin-bottom: 0.5rem;     /* Adds space below title */
+    line-height: 1.3;          /* Sets line spacing */
+}
+
+.tre-date {
+    color: #777;               /* Makes date gray colored */
+    font-size: 0.9rem;         /* Sets smaller font size */
+    margin-bottom: 0.75rem;    /* Adds space below date */
+    display: block;            /* Makes date a block element */
+}
+
+.tre-excerpt {
+    margin-bottom: 1.5rem;     /* Adds space below excerpt */
+    color: #e4e4e4;               /* Makes text dark gray */
+    font-size: 0.95rem;        /* Sets font size */
+    line-height: 1.5;          /* Sets line spacing */
+}
+
+.tre-category {
+    position: absolute;        /* Positions category label absolutely */
+    top: 15px;                 /* Sets distance from top */
+    left: 15px;                /* Sets distance from left */
+    background-color: var(--primary-color); /* Colors label */
+    color: white;              /* Makes text white */
+    padding: 0.25rem 0.75rem;  /* Adds padding inside label */
+    border-radius: 20px;       /* Makes rounded pill shape */
+    font-size: 0.8rem;         /* Sets smaller font size */
+    font-weight: 600;          /* Makes text semi-bold */
+    z-index: 1;                /* Ensures it's above the image */
+}
+/*********************
+ 5.   Footer
+**********************/
+footer {
+    background-color: #222;
+    color: var(--text-light);
+    padding: 2rem;
+    width: 100%;
+    height: auto;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-logo img {
+    height: 60px;
+    width: auto;
+    margin-bottom: 1rem;
+}
+
+.footer-content {
+    max-width: 800px;
+    width: 100%;
+}
+
+.footer-content h4 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.social-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+.footer-bot {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: #999;
+}
